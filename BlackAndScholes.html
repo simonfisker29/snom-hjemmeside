@@ -1,11 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B&S Option Pricer</title>
+    <link rel="stylesheet" href="styleBS.css">
 </head>
+
 <body>
-    <h1>Black & Scholes Option Pricer</h1>
+    <div id="outer">
+        <div id="inputContainer">
+            <h1>Black & Scholes Option Pricer</h1>
+            <div>
+                <label for="spot_price">Spot Price:</label>
+                <input id="spot_price" type="number" placeholder="100">
+            </div>
+
+            <div>
+                <label for="strike_price">Strike price:</label>
+                <input id="strike_price" type="number" placeholder="95">
+            </div>
+
+            <div>
+                <label for="risk_free">Risk-free interest rate:</label>
+                <input id="risk_free" type="number" placeholder="0.02">
+            </div>
+
+            <div>
+                <label for="volatility">volatility (sigma):</label>
+                <input id="volatility" type="number" placeholder="0.25">
+            </div>
+
+            <div>
+                <label for="ttm">Time to maturity:</label>
+                <input id="ttm" type="number" placeholder="0.5">
+            </div>
+
+
+            <button id="calculateBtn">Calculate Option Prices</button>
+
+            <h2>Results:</h2>
+
+            <p>Call Price: <span id="call_price">-</span></p>
+
+        </div>
+    </div>
+    <script src="scriptBS.js"></script>
 </body>
+
 </html>
